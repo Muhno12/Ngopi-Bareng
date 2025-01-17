@@ -1,0 +1,2992 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE VPN CLOUDFLARE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --primary: #00ff88;
+        --secondary: #00ffff;
+        --accent: #ff00ff;
+        --dark: #080c14;
+        --darker: #040608;
+        --light: #e0ffff;
+        --card-bg: rgba(8, 12, 20, 0.95);
+        --glow: 0 0 20px rgba(0, 255, 136, 0.3);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      body {
+        background: var(--darker);
+        color: var(--light);
+        min-height: 85vh;
+        background: url('https://picsum.photos/1024/1024?') no-repeat center center fixed;
+      }
+
+      .quantum-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        perspective: 1000px;
+        background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            animation: fadeIn 1s ease-in-out;
+            overflow-y: auto;
+      }
+
+      .quantum-card {
+        max-width: 100%;
+        background: rgba(6, 18, 67, 0.50);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 255, 136, 0.2);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: var(--glow);
+        transform-style: preserve-3d;
+        
+      }
+
+      @keyframes cardFloat {
+        0%, 100% { transform: translateY(0) rotateX(0); }
+        50% { transform: translateY(-10px) rotateX(2deg); }
+      }
+
+      .quantum-title {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+        position: relative;
+        
+      }
+
+      @keyframes titlePulse {
+        0%, 100% { transform: scale(1); filter: brightness(1); }
+        50% { transform: scale(1.02); filter: brightness(1.2); }
+      }
+
+      .quantum-table {
+        width: 100%;
+        min-width: 800px;
+        border-collapse: separate;
+        border-spacing: 0 8px;
+      }
+
+.quantum-table td {
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: rgba(0, 255, 136, 0.03);
+  border-left: 1px solid rgba(0, 255, 136, 0.2); /* Garis vertikal lebih halus */
+  border-bottom: 1px solid rgba(0, 255, 136, 0.2); /* Garis horizontal lebih halus */
+  transition: all 0.3s ease;
+}
+
+.quantum-table tr {
+  transition: all 0.3s ease;
+}
+
+.quantum-table tr:hover td {
+  background: rgba(0, 255, 136, 0.08);
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.1);
+}
+
+/* Menghilangkan border pada baris terakhir dan kolom terakhir agar lebih bersih */
+.quantum-table tr:last-child td {
+  border-bottom: none;
+}
+
+.quantum-table td:last-child {
+  border-right: none;
+}
+
+.quantum-table {
+  border-collapse: collapse; /* Menyatukan border antar elemen */
+}
+
+.quantum-table th, .quantum-table td {
+  padding: 1rem;
+  text-align: center; /* Menyusun teks di tengah */
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Garis pembatas bawah header tabel dengan warna hijau halus */
+.quantum-table th {
+        background: rgba(0, 255, 136, 0.1);
+        color: var(--primary);
+        padding: 1.2rem;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 2px solid var(--primary);
+        white-space: nowrap;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+/* Garis pembatas vertikal antar kolom dengan warna hijau halus */
+.quantum-table th, .quantum-table td {
+  border-right: 1px solid rgba(0, 255, 136, 0.3); /* Garis vertikal hijau halus antar kolom */
+}
+
+/* Garis pembatas bawah setiap baris data dengan warna hijau halus */
+.quantum-table td {
+  background: rgba(0, 255, 136, 0.03);
+  border-bottom: 1px solid rgba(0, 255, 136, 0.2); /* Garis horizontal hijau halus antar baris */
+  transition: all 0.3s ease;
+}
+
+.quantum-table tr:hover td {
+  background: rgba(0, 255, 136, 0.08);
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.1);
+}
+
+/* Tidak ada perubahan pada border, biarkan semuanya tampil */
+.quantum-table td {
+  border: 1px solid rgba(0, 255, 136, 0.2); /* Contoh: border tetap untuk semua sel */
+}
+
+.quantum-table td:last-child {
+  border-right: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+      .quantum-toast {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 1rem 2rem;
+        background: var(--primary);
+        color: var(--dark);
+        border-radius: 12px;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 600;
+        box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+        transform: translateY(100%);
+        opacity: 0;
+        
+        z-index: 1000;
+      }
+
+      @keyframes toastSlide {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .quantum-container {
+          padding: 0.5rem;
+          margin: 0.5rem;
+        }
+        
+        .quantum-card {
+          padding: 1rem;
+          margin: 0;
+          width: 100%;
+          border-radius: 10px;
+          max-width: 100%;
+        }
+    
+        .quantum-title {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+    
+        .table-wrapper {
+          margin: 0.5rem 0;
+          padding: 0;
+          border-radius: 10px;
+          max-height: 60vh; /* Restrict the height of the table */
+          overflow-y: auto; /* Allow scrolling within the table */
+          background: rgba(6, 18, 67, 0.89);
+        }
+    
+        .quantum-toast {
+          left: 1rem;
+          right: 1rem;
+          bottom: 1rem;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .quantum-card {
+          padding: 0.5rem;
+          max-width: 100%;
+        }
+    
+        .quantum-title {
+          font-size: 1.5rem;
+        }
+    
+        .table-wrapper {
+          margin: 0.5rem -0.5rem;
+          padding: 0 0.5rem;
+        }
+    
+        .quantum-table {
+          font-size: 0.8rem;
+        }
+    
+      .table-wrapper {
+        width: 100%;
+        max-height: calc(80vh - 200px); /* Atur tinggi maksimal untuk scroll */
+        overflow-y: auto; /* Aktifkan scroll vertikal */
+        -webkit-overflow-scrolling: touch; /* Lancar di perangkat touch */
+        margin: 1rem 0;
+        border-radius: 10px;
+        background: rgba(0, 255, 136, 0.02);
+      }
+
+      .table-wrapper:hover {
+        pointer-events: auto; /* Izinkan scroll pada hover */
+      }
+
+      .table-wrapper::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      .table-wrapper::-webkit-scrollbar-track {
+        background: rgba(0, 255, 136, 0.1);
+        border-radius: 4px;
+      }
+
+      .table-wrapper::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 4px;
+      }
+
+      .table-wrapper::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary);
+      }
+      
+    button {
+    background-color: rgba(46, 204, 113, 0.8); /* Warna hijau dengan transparansi yang lebih jelas */
+    color: white;
+    padding: 8px 18px;
+    margin: 1px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: rgba(46, 204, 113, 1); /* Warna hijau solid lebih cerah saat hover */
+    transform: translateY(-2px); /* Efek pergeseran saat hover */
+}
+
+button:active {
+    transform: translateY(2px); /* Efek pergeseran saat aktif */
+}
+
+button.small {
+    padding: 8px 13px;
+    font-size: 16px;
+    border-radius: 7px;
+}
+.small-font-popup {
+    font-size: 13px;
+}
+
+.close-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 11px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+
+    .quantum-title a:hover {
+            color: #2980b9;
+        }
+
+.quantum-form {
+  margin-top: 20px; /* Dikurangi */
+  display: flex;
+  justify-content: center;
+}
+
+.quantum-input {
+  padding: 8px 16px; /* Dikurangi */
+  width: 65%; /* Dikurangi */
+  max-width: 300px; /* Dikurangi */
+  color: white;
+  border-radius: 15px; /* Dikurangi */
+  border: 1.5px solid rgba(46, 204, 113, 0.7); /* Border lebih tipis */
+  background: rgba(46, 204, 113, 0.3); 
+  backdrop-filter: blur(6px); /* Blur sedikit dikurangi */
+  font-size: 14px; /* Dikurangi */
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.quantum-input:focus {
+  border-color: rgba(46, 204, 113, 1);
+  background: rgba(46, 204, 113, 0.4);
+  box-shadow: 0 0 8px rgba(46, 204, 113, 0.5); /* Shadow lebih kecil */
+}
+
+.quantum-button {
+  padding: 8px 16px; /* Dikurangi */
+  margin-left: 15px; /* Dikurangi */
+  border: none;
+  background: rgba(46, 204, 113, 0.4);
+  backdrop-filter: blur(6px); /* Blur sedikit dikurangi */
+  color: white;
+  border-radius: 15px; /* Dikurangi */
+  font-size: 14px; /* Dikurangi */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.quantum-button:hover {
+  background: rgba(46, 204, 113, 0.5);
+  transform: translateY(-1px); /* Transformasi hover dikurangi */
+}
+
+.quantum-button:active {
+  transform: translateY(1px); /* Transformasi aktif dikurangi */
+}
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.profile>img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #222;
+    border-radius: 100%;
+}
+.profile>p {
+    font-size: 1.8em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.link>a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin: 3px 40px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.link>a:hover {
+    background-color: transparent;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+}
+.footer>i {
+    color: white;
+    font-size: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.quantum-pagination {
+    margin-top: 20px; /* Dikurangi */
+    display: flex;
+    justify-content: center;
+}
+
+.quantum-pagination a {
+    padding: 8px 15px; /* Dikurangi */
+    border: 1.5px solid #3498db; /* Lebar border dikurangi */
+    color: #3498db;
+    text-decoration: none;
+    border-radius: 15px; /* Dikurangi */
+    margin: 0 8px; /* Dikurangi */
+    font-size: 14px; /* Dikurangi */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.quantum-pagination a:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-1px); /* Dikurangi */
+}
+
+.quantum-pagination .disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+</style>
+</head>
+<body>
+	<div class="quantum-container">
+    <h1 class="quantum-title">
+            <a href="https://t.me/sampiiiiu" target="_blank">NGOPI BARENG PROJECT</a>
+        </h1>
+     <div class="flex justify-center mb-2">
+  <form method="GET" class="flex items-center space-x-2 fixed top-20 left-1/2 transform -translate-x-1/2 z-10">
+    <input type="text" name="query" id="query" placeholder="Search by IP, Port, Org, or Country" style="background: transparent; color: #39ff14; font-weight: bold; padding: 0.5rem; border: 1px solid #39ff14; border-radius: 0.375rem; caret-color: #39ff14; height: 2.5rem;">
+    <button type="submit" class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" style="height: 2.5rem;">
+      Search
+    </button>
+  </form>
+</div>
+
+<div class="mt-24 md:mt-20 px-0.5 md:px-3">
+  <div class="flex justify-center mb-3">
+    <div class="w-full md:w-96 h-12 overflow-x-auto rounded-2xl px-2 py-1 flex items-center space-x-2 shadow-lg" style="background: transparent; border-image: linear-gradient(to right, #39ff14, #008080) 1; border-width: 1px; border-style: solid;">
+      <a href="/?cc=AE" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ae.svg">
+        </a><a href="/?cc=AL" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/al.svg">
+        </a><a href="/?cc=AM" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/am.svg">
+        </a><a href="/?cc=AR" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ar.svg">
+        </a><a href="/?cc=AT" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/at.svg">
+        </a><a href="/?cc=AU" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/au.svg">
+        </a><a href="/?cc=AZ" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/az.svg">
+        </a><a href="/?cc=BE" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/be.svg">
+        </a><a href="/?cc=BG" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/bg.svg">
+        </a><a href="/?cc=BR" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/br.svg">
+        </a><a href="/?cc=CA" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ca.svg">
+        </a><a href="/?cc=CH" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ch.svg">
+        </a><a href="/?cc=CN" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/cn.svg">
+        </a><a href="/?cc=CO" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/co.svg">
+        </a><a href="/?cc=CY" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/cy.svg">
+        </a><a href="/?cc=CZ" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/cz.svg">
+        </a><a href="/?cc=DE" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/de.svg">
+        </a><a href="/?cc=DK" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/dk.svg">
+        </a><a href="/?cc=EE" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ee.svg">
+        </a><a href="/?cc=ES" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/es.svg">
+        </a><a href="/?cc=FI" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/fi.svg">
+        </a><a href="/?cc=FR" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/fr.svg">
+        </a><a href="/?cc=GB" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/gb.svg">
+        </a><a href="/?cc=GI" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/gi.svg">
+        </a><a href="/?cc=HK" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/hk.svg">
+        </a><a href="/?cc=HU" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/hu.svg">
+        </a><a href="/?cc=ID" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/id.svg">
+        </a><a href="/?cc=IE" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ie.svg">
+        </a><a href="/?cc=IL" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/il.svg">
+        </a><a href="/?cc=IN" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/in.svg">
+        </a><a href="/?cc=IR" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ir.svg">
+        </a><a href="/?cc=IT" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/it.svg">
+        </a><a href="/?cc=JP" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/jp.svg">
+        </a><a href="/?cc=KR" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/kr.svg">
+        </a><a href="/?cc=KZ" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/kz.svg">
+        </a><a href="/?cc=LT" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/lt.svg">
+        </a><a href="/?cc=LU" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/lu.svg">
+        </a><a href="/?cc=LV" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/lv.svg">
+        </a><a href="/?cc=MD" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/md.svg">
+        </a><a href="/?cc=MO" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/mo.svg">
+        </a><a href="/?cc=MU" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/mu.svg">
+        </a><a href="/?cc=MX" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/mx.svg">
+        </a><a href="/?cc=MY" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/my.svg">
+        </a><a href="/?cc=NL" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/nl.svg">
+        </a><a href="/?cc=NZ" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/nz.svg">
+        </a><a href="/?cc=PH" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ph.svg">
+        </a><a href="/?cc=PL" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/pl.svg">
+        </a><a href="/?cc=PR" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/pr.svg">
+        </a><a href="/?cc=PT" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/pt.svg">
+        </a><a href="/?cc=QA" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/qa.svg">
+        </a><a href="/?cc=RO" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ro.svg">
+        </a><a href="/?cc=RS" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/rs.svg">
+        </a><a href="/?cc=RU" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ru.svg">
+        </a><a href="/?cc=SA" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/sa.svg">
+        </a><a href="/?cc=SC" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/sc.svg">
+        </a><a href="/?cc=SE" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/se.svg">
+        </a><a href="/?cc=SG" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/sg.svg">
+        </a><a href="/?cc=SI" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/si.svg">
+        </a><a href="/?cc=SK" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/sk.svg">
+        </a><a href="/?cc=T1" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="https://installer.us.kg/circle-flags/flags/t1.svg">
+        </a><a href="/?cc=TH" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/th.svg">
+        </a><a href="/?cc=TR" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/tr.svg">
+        </a><a href="/?cc=TW" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/tw.svg">
+        </a><a href="/?cc=UA" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/ua.svg">
+        </a><a href="/?cc=US" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/us.svg">
+        </a><a href="/?cc=UZ" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/uz.svg">
+        </a><a href="/?cc=VN" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/vn.svg">
+        </a><a href="/?cc=ZA" class="py-1">
+      <img width="35" style="bg-dark margin-right: 8px; border: 3px solid transparent; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); flex-shrink: 0; max-width: 55px; max-height: 55px; background: linear-gradient(90deg, #39ff14, #008080); border-image: linear-gradient(90deg, #39ff14, #008080) 1;" src="images/za.svg">
+        </a>
+    </div>
+  </div>
+</div>
+
+  <div class="table-wrapper">
+              <table class="quantum-table">
+                <thead>
+                    <tr>
+                        <th>IP:PORT</th>
+                        <th>STATUS IP</th>
+                        <th>COUNTRY</th>
+                        <th>ISP</th>
+                        <th>VLESS</th>
+                        <th>TROJAN</th>
+                        <th>SHADOWSOCKS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">20.233.68.69:2053</td>
+                        <td class="proxy-status" id="status-20.233.68.69:2053" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Microsoft Azure</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F20.233.68.69-2053&security=tls&sni=sub.gpj.us.kg#AE%20Microsoft%20Azure', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F20.233.68.69-2053&security=none&sni=#AE%20Microsoft%20Azure')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F20.233.68.69-2053&security=tls&sni=sub.gpj.us.kg#AE%20Microsoft%20Azure', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F20.233.68.69-2053&security=none&sni=sub.gpj.us.kg#AE%20Microsoft%20Azure')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F20.233.68.69-2053&security=tls&sni=sub.gpj.us.kg#AE%20Microsoft%20Azure', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F20.233.68.69-2053&security=none&sni=sub.gpj.us.kg#AE%20Microsoft%20Azure')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 20.233.68.69:2053</div>
+<div class="text-xs">ISP : Microsoft Azure</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=20.233.68.69:2053')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-20.233.68.69:2053');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-20.233.68.69:2053');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">152.32.181.246:44070</td>
+                        <td class="proxy-status" id="status-152.32.181.246:44070" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Ucloud Information Technology Hk</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F152.32.181.246-44070&security=tls&sni=sub.gpj.us.kg#AE%20Ucloud%20Information%20Technology%20Hk', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F152.32.181.246-44070&security=none&sni=#AE%20Ucloud%20Information%20Technology%20Hk')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F152.32.181.246-44070&security=tls&sni=sub.gpj.us.kg#AE%20Ucloud%20Information%20Technology%20Hk', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F152.32.181.246-44070&security=none&sni=sub.gpj.us.kg#AE%20Ucloud%20Information%20Technology%20Hk')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F152.32.181.246-44070&security=tls&sni=sub.gpj.us.kg#AE%20Ucloud%20Information%20Technology%20Hk', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F152.32.181.246-44070&security=none&sni=sub.gpj.us.kg#AE%20Ucloud%20Information%20Technology%20Hk')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 152.32.181.246:44070</div>
+<div class="text-xs">ISP : Ucloud Information Technology Hk</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=152.32.181.246:44070')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-152.32.181.246:44070');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-152.32.181.246:44070');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">193.123.81.105:443</td>
+                        <td class="proxy-status" id="status-193.123.81.105:443" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Oracle Cloud</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.81.105-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.81.105-443&security=none&sni=#AE%20Oracle%20Cloud')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.81.105-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.81.105-443&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.81.105-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.81.105-443&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 193.123.81.105:443</div>
+<div class="text-xs">ISP : Oracle Cloud</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=193.123.81.105:443')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-193.123.81.105:443');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-193.123.81.105:443');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">3.28.240.153:2053</td>
+                        <td class="proxy-status" id="status-3.28.240.153:2053" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Amazon.com</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F3.28.240.153-2053&security=tls&sni=sub.gpj.us.kg#AE%20Amazon.com', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F3.28.240.153-2053&security=none&sni=#AE%20Amazon.com')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F3.28.240.153-2053&security=tls&sni=sub.gpj.us.kg#AE%20Amazon.com', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F3.28.240.153-2053&security=none&sni=sub.gpj.us.kg#AE%20Amazon.com')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F3.28.240.153-2053&security=tls&sni=sub.gpj.us.kg#AE%20Amazon.com', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F3.28.240.153-2053&security=none&sni=sub.gpj.us.kg#AE%20Amazon.com')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 3.28.240.153:2053</div>
+<div class="text-xs">ISP : Amazon.com</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=3.28.240.153:2053')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-3.28.240.153:2053');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-3.28.240.153:2053');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">109.61.42.25:2049</td>
+                        <td class="proxy-status" id="status-109.61.42.25:2049" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | G-Core Labs SA</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2049&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2049&security=none&sni=#AE%20G-Core%20Labs%20SA')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2049&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2049&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2049&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2049&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 109.61.42.25:2049</div>
+<div class="text-xs">ISP : G-Core Labs SA</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=109.61.42.25:2049')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-109.61.42.25:2049');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-109.61.42.25:2049');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">109.61.42.25:6533</td>
+                        <td class="proxy-status" id="status-109.61.42.25:6533" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | G-Core Labs SA</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-6533&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-6533&security=none&sni=#AE%20G-Core%20Labs%20SA')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-6533&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-6533&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-6533&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-6533&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 109.61.42.25:6533</div>
+<div class="text-xs">ISP : G-Core Labs SA</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=109.61.42.25:6533')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-109.61.42.25:6533');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-109.61.42.25:6533');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">217.195.200.52:80</td>
+                        <td class="proxy-status" id="status-217.195.200.52:80" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | G-Core Labs SA</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.52-80&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.52-80&security=none&sni=#AE%20G-Core%20Labs%20SA')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.52-80&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.52-80&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.52-80&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.52-80&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 217.195.200.52:80</div>
+<div class="text-xs">ISP : G-Core Labs SA</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=217.195.200.52:80')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-217.195.200.52:80');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-217.195.200.52:80');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">109.61.42.25:2059</td>
+                        <td class="proxy-status" id="status-109.61.42.25:2059" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | G-Core Labs SA</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2059&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2059&security=none&sni=#AE%20G-Core%20Labs%20SA')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2059&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2059&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2059&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.25-2059&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 109.61.42.25:2059</div>
+<div class="text-xs">ISP : G-Core Labs SA</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=109.61.42.25:2059')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-109.61.42.25:2059');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-109.61.42.25:2059');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">139.185.46.148:31135</td>
+                        <td class="proxy-status" id="status-139.185.46.148:31135" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Oracle Cloud</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.46.148-31135&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.46.148-31135&security=none&sni=#AE%20Oracle%20Cloud')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.46.148-31135&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.46.148-31135&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.46.148-31135&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.46.148-31135&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 139.185.46.148:31135</div>
+<div class="text-xs">ISP : Oracle Cloud</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=139.185.46.148:31135')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-139.185.46.148:31135');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-139.185.46.148:31135');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">217.195.200.194:1</td>
+                        <td class="proxy-status" id="status-217.195.200.194:1" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | G-Core Labs SA</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.194-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.194-1&security=none&sni=#AE%20G-Core%20Labs%20SA')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.194-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.194-1&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.194-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.194-1&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 217.195.200.194:1</div>
+<div class="text-xs">ISP : G-Core Labs SA</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=217.195.200.194:1')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-217.195.200.194:1');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-217.195.200.194:1');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">176.97.78.80:2053</td>
+                        <td class="proxy-status" id="status-176.97.78.80:2053" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | M247 Europe</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.97.78.80-2053&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.97.78.80-2053&security=none&sni=#AE%20M247%20Europe')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.97.78.80-2053&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.97.78.80-2053&security=none&sni=sub.gpj.us.kg#AE%20M247%20Europe')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.97.78.80-2053&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.97.78.80-2053&security=none&sni=sub.gpj.us.kg#AE%20M247%20Europe')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 176.97.78.80:2053</div>
+<div class="text-xs">ISP : M247 Europe</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=176.97.78.80:2053')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-176.97.78.80:2053');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-176.97.78.80:2053');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">176.125.231.110:443</td>
+                        <td class="proxy-status" id="status-176.125.231.110:443" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | M247 Europe</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.125.231.110-443&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.125.231.110-443&security=none&sni=#AE%20M247%20Europe')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.125.231.110-443&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.125.231.110-443&security=none&sni=sub.gpj.us.kg#AE%20M247%20Europe')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.125.231.110-443&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F176.125.231.110-443&security=none&sni=sub.gpj.us.kg#AE%20M247%20Europe')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 176.125.231.110:443</div>
+<div class="text-xs">ISP : M247 Europe</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=176.125.231.110:443')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-176.125.231.110:443');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-176.125.231.110:443');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">45.86.228.104:443</td>
+                        <td class="proxy-status" id="status-45.86.228.104:443" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | BlueVPS OU</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F45.86.228.104-443&security=tls&sni=sub.gpj.us.kg#AE%20BlueVPS%20OU', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F45.86.228.104-443&security=none&sni=#AE%20BlueVPS%20OU')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F45.86.228.104-443&security=tls&sni=sub.gpj.us.kg#AE%20BlueVPS%20OU', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F45.86.228.104-443&security=none&sni=sub.gpj.us.kg#AE%20BlueVPS%20OU')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F45.86.228.104-443&security=tls&sni=sub.gpj.us.kg#AE%20BlueVPS%20OU', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F45.86.228.104-443&security=none&sni=sub.gpj.us.kg#AE%20BlueVPS%20OU')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 45.86.228.104:443</div>
+<div class="text-xs">ISP : BlueVPS OU</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=45.86.228.104:443')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-45.86.228.104:443');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-45.86.228.104:443');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">185.209.49.17:8443</td>
+                        <td class="proxy-status" id="status-185.209.49.17:8443" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Itglobal Com Dmcc</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-8443&security=tls&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-8443&security=none&sni=#AE%20Itglobal%20Com%20Dmcc')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-8443&security=tls&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-8443&security=none&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-8443&security=tls&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-8443&security=none&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 185.209.49.17:8443</div>
+<div class="text-xs">ISP : Itglobal Com Dmcc</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=185.209.49.17:8443')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-185.209.49.17:8443');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-185.209.49.17:8443');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">185.209.49.17:2053</td>
+                        <td class="proxy-status" id="status-185.209.49.17:2053" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Itglobal Com Dmcc</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-2053&security=tls&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-2053&security=none&sni=#AE%20Itglobal%20Com%20Dmcc')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-2053&security=tls&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-2053&security=none&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-2053&security=tls&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F185.209.49.17-2053&security=none&sni=sub.gpj.us.kg#AE%20Itglobal%20Com%20Dmcc')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 185.209.49.17:2053</div>
+<div class="text-xs">ISP : Itglobal Com Dmcc</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=185.209.49.17:2053')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-185.209.49.17:2053');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-185.209.49.17:2053');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">38.180.11.201:443</td>
+                        <td class="proxy-status" id="status-38.180.11.201:443" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | M247 Europe</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.180.11.201-443&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.180.11.201-443&security=none&sni=#AE%20M247%20Europe')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.180.11.201-443&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.180.11.201-443&security=none&sni=sub.gpj.us.kg#AE%20M247%20Europe')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.180.11.201-443&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.180.11.201-443&security=none&sni=sub.gpj.us.kg#AE%20M247%20Europe')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 38.180.11.201:443</div>
+<div class="text-xs">ISP : M247 Europe</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=38.180.11.201:443')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-38.180.11.201:443');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-38.180.11.201:443');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">217.195.200.153:1</td>
+                        <td class="proxy-status" id="status-217.195.200.153:1" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | G-Core Labs SA</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.153-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.153-1&security=none&sni=#AE%20G-Core%20Labs%20SA')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.153-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.153-1&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.153-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.153-1&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 217.195.200.153:1</div>
+<div class="text-xs">ISP : G-Core Labs SA</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=217.195.200.153:1')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-217.195.200.153:1');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-217.195.200.153:1');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">109.61.42.167:6633</td>
+                        <td class="proxy-status" id="status-109.61.42.167:6633" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | G-Core Labs SA</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.167-6633&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.167-6633&security=none&sni=#AE%20G-Core%20Labs%20SA')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.167-6633&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.167-6633&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.167-6633&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F109.61.42.167-6633&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 109.61.42.167:6633</div>
+<div class="text-xs">ISP : G-Core Labs SA</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=109.61.42.167:6633')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-109.61.42.167:6633');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-109.61.42.167:6633');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">129.151.148.35:443</td>
+                        <td class="proxy-status" id="status-129.151.148.35:443" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Oracle Cloud</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F129.151.148.35-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F129.151.148.35-443&security=none&sni=#AE%20Oracle%20Cloud')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F129.151.148.35-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F129.151.148.35-443&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F129.151.148.35-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F129.151.148.35-443&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 129.151.148.35:443</div>
+<div class="text-xs">ISP : Oracle Cloud</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=129.151.148.35:443')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-129.151.148.35:443');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-129.151.148.35:443');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">37.202.222.182:2053</td>
+                        <td class="proxy-status" id="status-37.202.222.182:2053" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Zenlayer</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F37.202.222.182-2053&security=tls&sni=sub.gpj.us.kg#AE%20Zenlayer', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F37.202.222.182-2053&security=none&sni=#AE%20Zenlayer')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F37.202.222.182-2053&security=tls&sni=sub.gpj.us.kg#AE%20Zenlayer', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F37.202.222.182-2053&security=none&sni=sub.gpj.us.kg#AE%20Zenlayer')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F37.202.222.182-2053&security=tls&sni=sub.gpj.us.kg#AE%20Zenlayer', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F37.202.222.182-2053&security=none&sni=sub.gpj.us.kg#AE%20Zenlayer')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 37.202.222.182:2053</div>
+<div class="text-xs">ISP : Zenlayer</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=37.202.222.182:2053')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-37.202.222.182:2053');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-37.202.222.182:2053');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">89.31.120.79:56531</td>
+                        <td class="proxy-status" id="status-89.31.120.79:56531" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | M247 Europe</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F89.31.120.79-56531&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F89.31.120.79-56531&security=none&sni=#AE%20M247%20Europe')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F89.31.120.79-56531&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F89.31.120.79-56531&security=none&sni=sub.gpj.us.kg#AE%20M247%20Europe')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F89.31.120.79-56531&security=tls&sni=sub.gpj.us.kg#AE%20M247%20Europe', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F89.31.120.79-56531&security=none&sni=sub.gpj.us.kg#AE%20M247%20Europe')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 89.31.120.79:56531</div>
+<div class="text-xs">ISP : M247 Europe</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=89.31.120.79:56531')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-89.31.120.79:56531');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-89.31.120.79:56531');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">217.195.200.179:1</td>
+                        <td class="proxy-status" id="status-217.195.200.179:1" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | G-Core Labs SA</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.179-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.179-1&security=none&sni=#AE%20G-Core%20Labs%20SA')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.179-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.179-1&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.179-1&security=tls&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F217.195.200.179-1&security=none&sni=sub.gpj.us.kg#AE%20G-Core%20Labs%20SA')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 217.195.200.179:1</div>
+<div class="text-xs">ISP : G-Core Labs SA</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=217.195.200.179:1')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-217.195.200.179:1');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-217.195.200.179:1');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">193.123.84.1:51132</td>
+                        <td class="proxy-status" id="status-193.123.84.1:51132" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Oracle Cloud</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.84.1-51132&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.84.1-51132&security=none&sni=#AE%20Oracle%20Cloud')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.84.1-51132&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.84.1-51132&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.84.1-51132&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F193.123.84.1-51132&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 193.123.84.1:51132</div>
+<div class="text-xs">ISP : Oracle Cloud</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=193.123.84.1:51132')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-193.123.84.1:51132');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-193.123.84.1:51132');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">38.54.9.186:8443</td>
+                        <td class="proxy-status" id="status-38.54.9.186:8443" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Kaopu Cloud HK</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.54.9.186-8443&security=tls&sni=sub.gpj.us.kg#AE%20Kaopu%20Cloud%20HK', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.54.9.186-8443&security=none&sni=#AE%20Kaopu%20Cloud%20HK')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.54.9.186-8443&security=tls&sni=sub.gpj.us.kg#AE%20Kaopu%20Cloud%20HK', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.54.9.186-8443&security=none&sni=sub.gpj.us.kg#AE%20Kaopu%20Cloud%20HK')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.54.9.186-8443&security=tls&sni=sub.gpj.us.kg#AE%20Kaopu%20Cloud%20HK', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F38.54.9.186-8443&security=none&sni=sub.gpj.us.kg#AE%20Kaopu%20Cloud%20HK')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 38.54.9.186:8443</div>
+<div class="text-xs">ISP : Kaopu Cloud HK</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=38.54.9.186:8443')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-38.54.9.186:8443');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-38.54.9.186:8443');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+                        <tr class="hover:bg-gray-800 transition duration-300 ease-in-out">
+                        <td class="ip-cell">139.185.34.131:443</td>
+                        <td class="proxy-status" id="status-139.185.34.131:443" style="color: cyan;">Error</td>
+                        <td class="border border-gray-700 px-1 py-1 text-center">
+                        <img width="40" src="images/ae.svg" class="ms-2 rounded">
+                        </td>
+                        <td class="isp-cell">AE | Oracle Cloud</td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('VLess', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.34.131-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'vless://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.34.131-443&security=none&sni=#AE%20Oracle%20Cloud')">VLESS </button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Trojan', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.34.131-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'trojan://43aeccd1-9f7c-4dca-bdb1-04bd28d741ae@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.34.131-443&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">TROJAN</button></td>
+                        <td><button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105" onclick="showOptions('Shadowsocks', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:443?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.34.131-443&security=tls&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud', 'ss://bm9uZTo0M2FlY2NkMS05ZjdjLTRkY2EtYmRiMS0wNGJkMjhkNzQxYWU%3D@sub.gpj.us.kg:80?encryption=none&type=ws&host=sub.gpj.us.kg&path=%2F139.185.34.131-443&security=none&sni=sub.gpj.us.kg#AE%20Oracle%20Cloud')">SHADOWSOCKS</button>
+                       </td>
+                    </tr>
+        <script>
+            function showOptions(type, tls, ntls) {
+    Swal.fire({
+        width: '270px',
+        html: `
+        <div class="flex items-center justify-center mb-2">
+            <img width="70" src="https://installer.us.kg/circle-flags/flags/ae.svg" class="ms-2 rounded" alt="AE Flag">
+        </div>
+            <div class="h-px bg-[#4682b4] shadow-sm"></div>
+<div class="text-xs">IP : 139.185.34.131:443</div>
+<div class="text-xs">ISP : Oracle Cloud</div>
+<div class="text-xs">Country : AE</div>
+<div class="h-px bg-[#4682b4] shadow-sm"></div>
+<br>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${tls}')">Copy TLS</button>
+<button class="bg-[#2ecc71] bg-opacity-80 py-2 px-3 text-xs rounded-md" onclick="copyToClipboard('${ntls}')">Copy NTLS</button>
+<div class="mt-3">
+    <button class="close-btn" onclick="Swal.close()">Close</button>
+</div>
+        `,
+        showCloseButton: false,
+        showConfirmButton: false,
+        background: 'rgba(6, 18, 67, 0.70)',
+        color: 'white',
+        customClass: {
+            popup: 'rounded-popup',
+            closeButton: 'close-btn'
+        }
+    });
+}
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        width: '270px',
+                        text: 'Teks berhasil disalin ke clipboard.',
+                        icon: 'success',
+                        background: 'rgba(6, 18, 67, 0.70)',
+                        color: 'white',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }).catch(err => {
+                    Swal.fire('Error!', 'Gagal menyalin teks.', 'error');
+                });
+            }
+        </script>
+<script>
+          fetch('https://sub.gpj.us.kg/geo-ip?ip=139.185.34.131:443')
+            .then(response => response.json())
+            .then(data => {
+              const statusElement = document.getElementById('status-139.185.34.131:443');
+              const spinner = document.getElementById('ping-' + data.proxy + ':' + data.port);
+
+      // Ambil data status dan delay
+      const status = data.status || 'UNKNOWN';
+      const delay = data.delay || 'N/A';
+
+              if (status === 'ACTIVE') {
+    statusElement.innerHTML = 'ACTIVE<br><span style="color: gold;">(' + delay + ')</span>'; // Pisahkan ACTIVE dan delay
+    statusElement.style.color = '#00FF00'; /* Warna hijau terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+} else if (status === 'DEAD') {
+    statusElement.textContent = 'DEAD';
+    statusElement.style.color = '#FF3333'; /* Warna merah terang */
+    statusElement.style.fontSize = '14px'; /* Ukuran font lebih besar */
+    statusElement.style.fontWeight = 'bold'; /* Menebalkan teks */
+}
+
+            })
+            .catch(error => {
+              const statusElement = document.getElementById('status-139.185.34.131:443');
+              statusElement.textContent = 'Error';
+              statusElement.style.color = 'cyan';
+            });
+        </script>
+        
+
+      </tbody>
+      </table>
+      </div>
+     <div class="fixed bottom-3 left-1/2 transform -translate-x-1/2 flex gap-4 z-50">
+    <nav class="bg-opacity-90 p-4 shadow-xl rounded-lg">
+        <ul class="flex justify-center space-x-4">
+            <li>
+                <button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105">
+                    <a href="/0">Prev</a>
+                </button>
+            </li>
+            <li>
+                <button disabled="" class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md cursor-not-allowed opacity-50">
+                    1
+                </button>
+            </li>
+            <li>
+                <button class="px-3 py-1 bg-gradient-to-r from-[#39ff14] to-[#008080] text-black font-semibold border-0 rounded-md transform transition hover:scale-105">
+                    <a href="/1">Next</a>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+      
+      <br>
+      <br></div></body></html>
